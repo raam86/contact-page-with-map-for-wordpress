@@ -29,7 +29,7 @@ function drawMap(baseURI,imageURL,addDetails,zLevel,headerImage){
 		});
 		var contentString = addDetails;
 		var infowindow = new google.maps.InfoWindow({
-			content: '<h2 style="" class="info_window_title">' + contentString + '</h2>' + "<img class='info_window_image' src='" + headerImage + "'/>"
+			content: '<h2 class="info_window_title">' + contentString + '</h2>' + "<img class='info_window_image' src='" + headerImage + "'/>"
 		});
 		infowindow.open(map,marker);
 		marker.setMap(map);
