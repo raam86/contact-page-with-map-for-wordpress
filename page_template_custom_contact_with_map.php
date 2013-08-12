@@ -35,15 +35,14 @@ get_header(); ?>
 			</header>
 			<div class="right_side">
 				<?php the_content() ?>
-				<p>מלאו פרטים ונחזור אליכם בהקדם:</p>
-				<div> 
+				<h4>מלאו פרטים ונחזור אליכם בהקדם:</h4>
+				<div class ="menu_tsur_kesher"> 
 					<?php 
 					$meta_values = get_post_meta( get_the_ID() );
 					echo do_shortcode($meta_values['טופס'][0]); ?> 
 				</div>
 				<script>
 				$('document').ready(function(){
-					console.log("ready");
 					var input   = "<?php echo $meta_values['כתובת'][0] ?>",
 					zLevel      = "<?php echo $meta_values['רמת זום'][0] ?>",
 					place       = input.replace(/\s/g, '+'),
@@ -83,5 +82,5 @@ get_header(); ?>
 	<?php endwhile; else: ?>
 	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 <?php endif; ?>
-</div><!-- #primary -->
+</div>
 <?php get_footer(); ?>
