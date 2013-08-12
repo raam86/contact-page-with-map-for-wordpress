@@ -35,8 +35,8 @@ get_header(); ?>
 			</header>
 			<div class="right_side">
 				<?php the_content() ?>
-				<span class="tsur_kesher_text">מלאו פרטים ונחזור אליכם בהקדם:</span>
-				<div class ="menu_tsur_kesher"> 
+				<p>מלאו פרטים ונחזור אליכם בהקדם:</p>
+				<div> 
 					<?php 
 					$meta_values = get_post_meta( get_the_ID() );
 					echo do_shortcode($meta_values['טופס'][0]); ?> 
@@ -44,12 +44,12 @@ get_header(); ?>
 				<script>
 				$('document').ready(function(){
 					console.log("ready");
-					var input = "<?php echo $meta_values['כתובת'][0] ?>",
-					zLevel = "<?php echo $meta_values['רמת זום'][0] ?>",
-					place = input.replace(/\s/g, '+'),
-					baseURI = 'http://maps.googleapis.com/maps/api/geocode/json?address=' + place + '&sensor=true',
-					imageURL = '<?php echo(  wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ))[0]); ?>',
-					addDetails = "<?php echo $meta_values['פרטי כתובת'][0] ?>",
+					var input   = "<?php echo $meta_values['כתובת'][0] ?>",
+					zLevel      = "<?php echo $meta_values['רמת זום'][0] ?>",
+					place       = input.replace(/\s/g, '+'),
+					baseURI     = 'http://maps.googleapis.com/maps/api/geocode/json?address=' + place + '&sensor=true',
+					imageURL    = '<?php echo(  wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ))[0]); ?>',
+					addDetails  = "<?php echo $meta_values['פרטי כתובת'][0] ?>",
 					headerImage = '<?php echo get_header_image() ?>';
 					drawMap(baseURI,imageURL,addDetails,zLevel,headerImage);
 				});
