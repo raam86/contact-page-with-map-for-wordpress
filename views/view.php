@@ -1,0 +1,1 @@
+<div id="<?php $this->ID; ?>" style="height: <?php $this->height; ?>;" class="SGMAP" data-zoom="<?php $this->zoom; ?>" data-iu="<?php $this->marker; ?>" data-ad="<?php $this->text; ?>" data-hi="<?php $this->logo; ?>" data-addr="<?php $this->address; ?>"></div>
