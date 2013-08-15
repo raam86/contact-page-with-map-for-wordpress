@@ -1,11 +1,9 @@
-contact-page-with-map-for-wordpress
-===================================
+ googleMap
+===========
 
-Contact page with custom map template for wordpress.
-This template uses google maps API to create a custom   map from a simple address.
+Simple and lightweight plugin to add a customized google map using a shortcode.
 
-Usage: Copy files to wordpess directory.
-
-Fill in the custom fields with appropiate values. 
-
-*Note the attached image will be used as the anchor for the info window. 
+Usage: 
+```
+[SGmap address="Star Creek Drive, San Antonio, TX, United States" zoom=8 logo="http://URL/TO/LOGO" text="text text text"]
+```
