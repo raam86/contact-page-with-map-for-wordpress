@@ -1,4 +1,4 @@
- googleMap
+Google Map WP shortcode
 ===========
 
 Simple and lightweight plugin to add a customized google map using a shortcode.
